@@ -41,8 +41,10 @@ a {
 }
 
 .assignment a:hover {
-  background: #F06;
-  color: #F06;
+  background: #3193f5
+;
+  color: #3193f5
+;
   text-decoration: none;
 }
 
