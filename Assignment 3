@@ -1,0 +1,96 @@
+<!DOCTYPE html> 
+<html> 
+    <head> 
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, maximum-scale=1.0" />
+
+        <title>Vanessa's Assignment 2!</title> 
+
+        <link href="style.css" media="screen" rel="stylesheet" type="text/css" />
+
+    </head> 
+    <body> 
+
+        <div class="header">
+            <h1>Assignment 2: Parametric Modeling with Grasshopper</h1>
+            <p>By Vanessa Chien Lai - HCDE 533
+                <br>
+                <br> Quick preview of my final Grasshopper construction kit!
+            </p>
+            <p>
+                <img src="Assignment 2.1.png" width=800></a>
+            </p>
+            <p>
+                STEP 1: DESIGN!
+                <br> ------
+                <br> For this assignment, I wanted to use the parametric modeling in Grasshopper to come up with different polygons with a variation of cuts.
+                <br> I was really inspired by some of the examples we saw in class, and decided to try cuts of different angles to see what kind of 3D shape I could come up with. 
+                <br> Ultimately, I came up with four polygons, each with rounded corners (radius of 5). I used the polygon component and used parametric inputs to determine the number of sides.
+                <br> Other inputs I had were Y height of the rectangle (12), width (described below), as well as inputs for the move function, which was set to (width/-2) for the X movement and (radius-height) for the Y movement.
+    
+            </p>
+            <p>
+                <img src="Assignment 2.4.png" width=900></a>
+            </p>
+            <p>
+                STEP 2: SET CARDBOARD WIDTH & ARRAYS.
+                <br> ------
+                <br> For my cardboard cuts, I used an array component to vary the number of cuts I had on each polygon.
+                <br> For my cardboard, I decided to make the cuts a bit thinner than the width of the cardboard (based on my experience with assignment 1).
+                <br> I made the width of the cuts 4.8. Next, I baked each of my polygons. Lastly, I used the JOIN command to join my curves!
+            </p>
+            <p>
+                <img src="Assignment 2.5.png" width=800></a>
+            </p>
+ <p>
+                <img src="Assignment 2.6.png" width=800></a>
+            </p>
+            <p>
+                STEP: PRINT!
+                <br> ------
+                <br> It was my first time using the laser cutter at the 8, so the settings were new to me and looked a little different form the ones at the MILL.
+                <br> My first attempt at cutting resulted in a small fire (oops) which I was able to quickly put out. 
+            </p>
+            <p>
+                <img src="Assignment 2.2.png" width=800></a>
+            </p>
+            <p>
+                My final pieces came together without a hitch!
+                <br> I was able to make a lot of different structures with the 4 shapes I cut.
+                <br> ------
+                <br> Laser cutter settings:
+                <br> 5% speed
+                <br> 37% power
+                <br> 310 PPI
+                <br> ------
+                <br> A couple more pics (look how clean these cuts turned out!) including the small fire incident...
+            </p>
+            <p> 
+                <img src="Assignment 2.3.png" width=800></a>
+            </p>
+            <p> Acknowledgments:
+                <br> ------
+                <br> Jalia Evans for her help with my mini fire, laser cutting and Illustrator support, and moral support!
+                <br> ------
+                <br>Assignment files here:
+            </p>
+            <a href="https://github.com/vanechien/hcde533/blob/bd48d12c12cd6789c9834fde6ffdc4b240434854/Assignment%202%20Files/Assignment%202%20-%20polygon.gh"> Grasshopper File </a>
+            <br> <a href="https://github.com/vanechien/hcde533/blob/bd48d12c12cd6789c9834fde6ffdc4b240434854/Assignment%202%20Files/assignment%202%20shapes.AI"> Adobe Illustrator File </a>
+            <br> <a href="https://github.com/vanechien/hcde533/blob/bd48d12c12cd6789c9834fde6ffdc4b240434854/Assignment%202%20Files/assignment2.3dm"> Rhino File </a>
+            </p>
+            <p> 
+               One final screenshot of my Grasshopper file:
+            </p>
+            <p>
+                <img src="Grasshopper screenshot (1).png" width=1200></a>
+            </p>
+            <p>
+                Final result:
+            </p>
+            <p>
+                <img src="Assignment 2.1.png" width=800></a>
+            </p>
+        </div>
+        
+    </body>
+</html>
