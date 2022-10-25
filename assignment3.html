@@ -4,7 +4,7 @@
         <meta charset="utf-8"> 
         <meta name="viewport" content="width=device-width, maximum-scale=1.0" />
 
-        <title>Vanessa's Assignment 2!</title> 
+        <title>Vanessa's Assignment 3!</title> 
 
         <link href="style.css" media="screen" rel="stylesheet" type="text/css" />
 
@@ -12,83 +12,90 @@
     <body> 
 
         <div class="header">
-            <h1>Assignment 2: Parametric Modeling with Grasshopper</h1>
+            <h1>Assignment 3: Getting Started with 3D Printing</h1>
             <p>By Vanessa Chien Lai - HCDE 533
                 <br>
-                <br> Quick preview of my final Grasshopper construction kit!
+                <br> Quick preview of my prints all placed together!
             </p>
             <p>
-                <img src="Assignment 2.1.png" width=800></a>
+                <img src="Assignment 3 Thumbnail.jpg" width=500></a>
             </p>
             <p>
-                STEP 1: DESIGN!
+                STEP 1: ASSEMBLE
                 <br> ------
-                <br> For this assignment, I wanted to use the parametric modeling in Grasshopper to come up with different polygons with a variation of cuts.
-                <br> I was really inspired by some of the examples we saw in class, and decided to try cuts of different angles to see what kind of 3D shape I could come up with. 
-                <br> Ultimately, I came up with four polygons, each with rounded corners (radius of 5). I used the polygon component and used parametric inputs to determine the number of sides.
-                <br> Other inputs I had were Y height of the rectangle (12), width (described below), as well as inputs for the move function, which was set to (width/-2) for the X movement and (radius-height) for the Y movement.
-    
+                <br> Assembly for this printer took about 2 hours. I found the instructions a bit confusing, but manageable (thank you IKEA for the experience with confusing furniture assembly instructions!)
+                <br> Overall, I didn't have too much trouble, but I did have to unscrew pieces a couple times because I kept getting the cables on the wrong sides.
+                <br> After connecting all the cables, I was ready to level the bed!
             </p>
             <p>
-                <img src="Assignment 2.4.png" width=900></a>
+                <img src="Assignment 3.1.png" width=900></a>
             </p>
             <p>
-                STEP 2: SET CARDBOARD WIDTH & ARRAYS.
+                STEP 2: LEVELING THE BED.
                 <br> ------
-                <br> For my cardboard cuts, I used an array component to vary the number of cuts I had on each polygon.
-                <br> For my cardboard, I decided to make the cuts a bit thinner than the width of the cardboard (based on my experience with assignment 1).
-                <br> I made the width of the cuts 4.8. Next, I baked each of my polygons. Lastly, I used the JOIN command to join my curves!
+                <br> Next, I did the leveling procedure for the bed! I had quite a bit of trouble at first because the back left corner was way too close to the nozzle.
+                <br> After doing some online searching, I read that this is a pretty common issue! So I raised the z axis stopper slightly, giving me more wiggle room.
+                <br> I printed the squares to check how well it was leveled (not pictured) and after some tweaks, I made another bed level test I found online.
             </p>
             <p>
-                <img src="Assignment 2.5.png" width=800></a>
-            </p>
- <p>
-                <img src="Assignment 2.6.png" width=800></a>
+                <img src="Assignment 3.2.png" width=800></a>
             </p>
             <p>
-                STEP: PRINT!
+                STEP 3: TIME TO PRINT GEOMETRIC SHAPES!
                 <br> ------
-                <br> It was my first time using the laser cutter at the 8, so the settings were new to me and looked a little different form the ones at the MILL.
-                <br> My first attempt at cutting resulted in a small fire (oops) which I was able to quickly put out. 
+                <br> Here's a quick overview of the first part of the assignment: geometric shapes
             </p>
             <p>
-                <img src="Assignment 2.2.png" width=800></a>
+                <img src="Assignment 3.3.png" width=800></a>
             </p>
             <p>
-                My final pieces came together without a hitch!
-                <br> I was able to make a lot of different structures with the 4 shapes I cut.
-                <br> ------
-                <br> Laser cutter settings:
-                <br> 5% speed
-                <br> 37% power
-                <br> 310 PPI
-                <br> ------
-                <br> A couple more pics (look how clean these cuts turned out!) including the small fire incident...
+                The cube prints were pretty straightforward. I printed low, standard, and super qualities, as well as the concentric setting.
+                <br> Next, I printed the tubes, with single extrusion (0.4mm) and double extusion (0.8mm) walls.
+                <br> Feeling a little more confident, I attempted to print 3 of the cylinders in one print. Even though they printed okay, I noticed a wonky waving on the side of the cylinders.
+                <br> I also added small extruded labels to indicate 0.1mm and 0.001mm tolerance.
             </p>
             <p> 
-                <img src="Assignment 2.3.png" width=800></a>
+                <img src="Assignment 3.35.png" width=800></a>
+                <img src="Assignment 3.4.png" width=800></a>
             </p>
-            <p> Acknowledgments:
-                <br> ------
-                <br> Jalia Evans for her help with my mini fire, laser cutting and Illustrator support, and moral support!
-                <br> ------
-                <br>Assignment files here:
+            <p> 
+                Here are all my geometric prints in one picture! I also recorded the sizes with my caliper (see chart below). Overall, the measurements were surprisingly accurate!
             </p>
             <a href="https://github.com/vanechien/hcde533/blob/bd48d12c12cd6789c9834fde6ffdc4b240434854/Assignment%202%20Files/Assignment%202%20-%20polygon.gh"> Grasshopper File </a>
             <br> <a href="https://github.com/vanechien/hcde533/blob/bd48d12c12cd6789c9834fde6ffdc4b240434854/Assignment%202%20Files/assignment%202%20shapes.AI"> Adobe Illustrator File </a>
             <br> <a href="https://github.com/vanechien/hcde533/blob/bd48d12c12cd6789c9834fde6ffdc4b240434854/Assignment%202%20Files/assignment2.3dm"> Rhino File </a>
             </p>
+           
             <p> 
-               One final screenshot of my Grasshopper file:
+                <img src="Assignment 3.5.png" width=800></a>
+                <img src="Assignment 3.6.png" width=800></a>
+            </p>
+
+            <p>
+                STEP 4: PRINTING NESTED SHAPES
+                <br> ------
+                <br> For my nested shapes, I wanted switch it up and try printing some organic shapes. I had no idea how to do this in Rhino, so here are some tutorials I watched:
+                <br><a href="https://www.youtube.com/watch?v=texTjIt6-00"> Organic Vase Rhino Tutorial </a>
+            <br> <a href="https://www.youtube.com/watch?v=5afsQYe9apE"> Cookie Cutter Rhino Tutorial </a>
+            </p>
+            
+            <p>
+                After playing around on Rhino, I was able to create a model of the organic shapes in their nested form. However, I kept getting an error on Cura saying I had "missing or extraneous surfaces."
+            </p>
+            <p> 
+                <img src="Assignment 3.7.png" width=800></a>
+            </p>
+
+                <br> After some struggle I realized it's because I needed some thickness in my extrusion, and extruding only lines always resulted in an error.
+                <br> Once I learned to fix that, it worked! Here's the preview on Cura:
+                <br> <img src="Assignment 3.8.png" width=800></a>
+    
+            <p>
+                Final result was just as I hoped, except for a bulging layer that I'm still troubleshooting:
             </p>
             <p>
-                <img src="Grasshopper screenshot (1).png" width=1200></a>
-            </p>
-            <p>
-                Final result:
-            </p>
-            <p>
-                <img src="Assignment 2.1.png" width=800></a>
+                <img src="Assignment 3 final1.JPG" width=800></a>
+                <img src="Assignment 3 final2.jpg" width=800></a>
             </p>
         </div>
         
