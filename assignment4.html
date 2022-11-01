@@ -1,0 +1,90 @@
+<!DOCTYPE html> 
+<html> 
+    <head> 
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, maximum-scale=1.0" />
+
+        <title>Vanessa's Assignment 4!</title> 
+
+        <link href="style.css" media="screen" rel="stylesheet" type="text/css" />
+
+    </head> 
+    <body> 
+
+        <div class="header">
+            <h1>Assignment 4: Subtractive Manufacturing: CNC Milling</h1>
+            <p>By Vanessa Chien Lai - HCDE 533
+                <br>
+                <br> Quick preview of the finger joint box I made for this assignment:
+            </p>
+            <p>
+                <img src="Assignment 4.1.png" width=800></a>
+            </p>
+            <p>
+                STEP 1: DEMO, LEARNING, TESTING
+                <br> ------
+                <br> This week, we had a very involved demo during class which I really appreciated. I'm a hands-on learner, and Junchao's demo was really helpful!
+                <br> We were able to see how the mill worked up close, and even milled (or attempted to mill) a square. 
+                <br> Within 5 seconds the FR1 layer came off, along with the sacrificial layer... that's how we learned that the WHOLE surface needs double sided tape.
+                <br> After testing it out I was ready to try it on my own!
+            </p>
+            <p>
+                <img src="Assignment 4.2.png" width=900></a>
+            </p>
+            <p>
+                STEP 2: PLANNING & MODELING
+                <br> ------
+                <br> Next, I used my caliper to measure the thickness of the FR1 board and got 1.4mm.
+                <br> Because I didn't want my finger joints to stick out, I chose to make the slots only 1mm deep. 
+                <br> Junchao mentioned that we needed to leave some wiggle room for the finger joints, so I made the joints 6.7mm and the slots 7mm (this was just a guesstimate).
+                <br> I also added dogbones of 1mm in diameter, and a cute little bear for the engraving.
+                <br> For unknown reasons, any shapes that were mirrored in Rhino were showing up wrong on KiCAD so I had to tweak my file a few times.
+                <br> As instructed, I set my box cutting lines as Edge_Cuts and the bear as User_Drawings.
+            </p>
+            <p>
+                <img src="Assignment 4.3.png" width=900></a>
+            </p>
+            <p>
+                STEP 3: TIME TO MILL!
+                <br> ------
+                <br> I struggled for a long time to get my GRB to look right on Bantam. For some reason, the bear kept getting distorted, and the face ended up shrinking.
+                <br> It turned into this little mole that was actually quite cute. I decided to keep it :)
+            </p>
+            <p>
+                <img src="Assignment 4.4.png" width=900></a>
+            </p>
+            <p>
+                Here were the settings I used on the Bantam software:
+                <br> Material size - 100mm x 70mm x 1.4mm (FR1 thickness)
+                <br> Z-offset - 1.4mm (sacrificial layer, including double sided tape)
+                <br> I also added a 5mm x 5mm offset so that the design wouldn't cut so close to the edge.
+            </p>
+            <p> 
+                <img src="Assignment 4.5.png" width=1000></a>
+            </p>
+            <p> 
+                Attempt #1 cutting went smooth, but the pieces just would not fit together (and I did not want to sand them).
+                <br> I went back to my Rhino file and trimmed the finger joints a bit more, making them 6.5mm for the 7mm slot.
+                <br> I was able to fit the pieces together on Attempt #2! However, I learned that this material is very rigid and unforgiving.
+                <br> My finger joint box was a little loose, which means I probably should have gone with 6.6mm. Oh well, good experience for next time.
+                <br> Here's the messy aftermath and some progress pics:
+            </p>
+            <p> 
+                <img src="Assignment 4.6.png" width=800></a>
+            </p>
+            <p>
+                <br> Here's the final result! Bear-that-looks-like-a-monkey Finger Joint Box!
+                <br>
+                <br> <img src="Assignment 4.7.png" width=800></a>
+
+            <p> 
+                <br> ------
+                <br> Acknowledgements: Thank you to Annie Lin for all her help with the Bantam software, and Petrina for the moral support and Rhino inspo!
+                <br> ------
+                <br> <a href="https://drive.google.com/drive/folders/1jnb0vEbWpumz3w3oOev0eS6c-EM_sVW2?usp=sharing"> DXFs, Gerbers, and Rhino files!  </a>
+                <br> ------
+            </p>
+        </div>
+        
+    </body>
+</html>
