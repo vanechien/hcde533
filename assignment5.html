@@ -73,8 +73,7 @@
                 <img src="Assignment 5.8.png" width=1000></a>
             </p>
             <p> 
-                PART 2 of the assignment... Lamps part 1!
-                -------------------------------------------
+                ------------------------ LAMPS PART 1 -------------------------------------------
                 <br> STEP 1: INSPIRATION & PLANNING
                 <br> ------
                 <br> Because this assignment involved a light component, I wanted to do something with organic shapes. I found these cool cell-looking things really interesting, and I had seen them in some buildings online.
@@ -116,18 +115,42 @@
             <p> 
                 <br> STEP 3: SLICING & PRINTING!
                 <br> ------
-                <br> I was completely new to voronoi spheres (and still a Grasshopper noob) so I did some reading and watched a tutorial on how to create voronoi spheres.
-                <br> I began with a sphere with a radius of 25, and for the random points for the voronoi, I used the "Populate Geometry" component, with a count of 0-100.
-                <br> I also used a "Bounding Box" component to give the voronoi shapes a boundary. With the "Scale" component, I was able to create a smaller sphere within the sphere, which helped give the wall of the sphere a certain width.
+                <br> The fist time I imported into Cura, I could immediately tell something went wrong because I had the "extraneous surfaces" error (sphere on the right).
+                <br> I think this could have been because I didn't group before baking, or I did not extrude properly before baking. 
+                <br> I had to redo the process, and the second time it imported with no issues! (See sphere on the left).
             </p>
             <p>
-                <img src="Assignment 5.11.png" width=1000></a>
+                <img src="Assignment 5.14.png" width=1000></a>
+            </p> 
+            <p> 
+                <br> For this print, I thought it might be smart to use "tree branch" supports, beacuse it's such a complex shape.
+                <br> I thought the branches could reach in through the nooks and crannies and help support the top of the sphere, which I was worried would cave in.
+                <br> Below you can see a preview of the print, with a top view to show the tree branches winding into the inside of the sphere.
+            </p>
+            <p>
+                <img src="Assignment 5.15.png" width=900></a>
+            </p> 
+            <p> 
+                <br> Lastly, in order to pause the print halfway and add my candle, I had to add a Post Processing Script - basically, it's a command that interrupts the G code to tell the printer to pause.
+                <br> I asked the printer to pause after finishing layer #219, which based on the preview I guesstimated would be tell enough to hold my candle.
+                <br> I also told the nozzle to move out of the way (to coordinate 0, 230) and maintain a standby temp of 180 so that I would be able to add the candle in.
+                <br> this took quite a few tries but I figured it out! 
+            </p>
+            <p>
+                <img src="Assignment 5.16.png" width=900></a>
+            </p> 
+            <p> 
+                <br> I made some mistakes throughout the printing process and was able to document it for your entertainment :) see below!    
+            </p>
+             <p>
+                <img src="Assignment 5.17.png" width=1100></a>
             </p> 
             <p> 
                 <br> ------
-                <br> Acknowledgements: Thank you to Annie Lin for all her help with the Bantam software, and Petrina Chan for the moral support and Rhino inspo!
+                <br> Acknowledgements: Thank you to Annie Lin for the moral support in printing such a complicated structure!
                 <br> ------
-                <br> <a href="https://drive.google.com/drive/folders/1jnb0vEbWpumz3w3oOev0eS6c-EM_sVW2?usp=sharing"> DXFs, Gerbers, and Rhino files!  </a>
+                <br> <a href="https://drive.google.com/drive/folders/1PQPtbuqFYioOFLXXId9ytCTrLJQfTcHX?usp=sharing"> Grasshopper and Rhino files!  </a>
+                <br> <a href="https://www.youtube.com/watch?v=eEHSlWYHD5g"> Awesome YouTube tutorial that taught me exactly what I needed for this assignment  </a>
                 <br> ------
             </p>
         </div>
