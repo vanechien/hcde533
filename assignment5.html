@@ -1,0 +1,106 @@
+<!DOCTYPE html> 
+<html> 
+    <head> 
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, maximum-scale=1.0" />
+
+        <title>Vanessa's Assignment 5!</title> 
+
+        <link href="style.css" media="screen" rel="stylesheet" type="text/css" />
+
+    </head> 
+    <body> 
+
+        <div class="header">
+            <h1>Assignment 5: Getting Meshy! and Lamps Part 1!</h1>
+            <p>By Vanessa Chien Lai - HCDE 533
+                <br>
+                <br> For the mesh for this assignment, I wanted to create a VW Bus-pickup truck I had seen online before, by combining two meshes.
+                <br> Below is the bus I had seen before (left) and the mesh I ended up making (right).
+            </p>
+            <p>
+                <img src="Assignment 5.1.png" width=800></a>
+            </p>
+            <p>
+                STEP 1: MESHING THE MESHES?
+                <br> ------
+                <br> First, I needed to find the meshes I wanted. I was on the hunt for a pickup truck STL and a VW bus STL.
+                <br> Finding a pickup truck was easy, but finding a VW bus (that was 1 singular STL) was much harder than I thought.
+                <br> Here are the STLs I ended up finding: 
+                <br> Chevy Silverado STL: https://www.thingiverse.com/thing:4931055
+                <br> VW Bus: https://www.thingiverse.com/thing:512454
+            </p>
+            <p>
+                <img src="Assignment 5.2.png" width=900></a>
+            </p>
+            <p>
+                STEP 2: SLICING & FIXING
+                <br> ------
+                <br> Next, it was time to slice the cars so that I could separate the pieces I wanted. This meant slicing off the front of the pickup truck and the back of the VW bus.
+                <br> First, I used < Mesh > to turn them into meshes. Next, I used < QuadRemesh > to create the quad mesh and then < MeshSplit > to split the cars in half using a rectangle polygon. This left me with two open meshes.
+            </p>
+            <p>
+                <img src="Assignment 5.3.png" width=900></a>
+            </p>
+            <p>
+                First, I used < Check > to check the mesh and < ShowEdges > to find the naked edges.
+                <br> Closing the pickup truck mesh was pretty easy. I just used < FillMeshHole >. The VW bus was much, MUCH harder!!
+                <br> It looks like I downloaded a bad mesh and there were a lot of problems. I had to use < DeleteMeshFaces > to delete some parts of the mesh and fill them back in.
+            </p>
+            <p>
+                <img src="Assignment 5.4.png" width=800></a>
+                <br>  <img src="Assignment 5.5.png" width=800></a>
+            </p>
+            <p>
+                STEP 3: TIME TO COMBINE!
+                <br> ------
+                <br> Finally, I was able to fix the meshes and I used < BooleanUnion > to combine the meshes into this VW pickup truck.
+                <br> It had no naked edges, non-manifold edges, nor degenerate surfaces...but I couldn't seem to get rid of the "1 extremely short edge."
+                <br> I decided to render and export it anyways, and added wheels to the front because the original STL didn't have them.
+            </p>
+            <p>
+                <img src="Assignment 5.6.png" width=900></a>
+                <br> <img src="Assignment 5.7.png" width=900></a>
+            </p>
+            <p>
+                STEP 4: CURA TEST
+                <br> ------
+                <br> When I imported it into Cura, it looked great! Super cute, and no errors. Then I sliced...
+                <br> ...and I realized the front of the bus disappeared (but the supports were still there?) I made the mistake of printing it anyway.
+                <br> It only printed the back. Looks like I have some more experimenting to do. Onto the next part of the assignment!
+            </p>
+            <p> 
+                <img src="Assignment 5.8.png" width=1000></a>
+            </p>
+            <p> 
+                PART 2 of the assignment... Lamps part 1!
+                -------------------------------------------
+                <br> STEP 1: INSPIRATION & PLANNING
+                <br> ------
+                <br> Because this assignment involved a light component, I wanted to do something with organic shapes. I found these cool cell-looking things really interesting, and I had seen them in some buildings online.
+                <br> Later I learned that these are called Voronoi Diagrams, which are "is a partition of a plane into regions close to each of a given set of objects" according to Wikipedia.
+                <br> I also learned this can be done through parametric modeling... (yes, Grasshopper. My nemesis)
+                <br> As for the light fixture, I was really inspired by these cascade spiral lamps and wanted to do something similar.
+            </p>
+            <p> 
+                <img src="Assignment 5.9.png" width=1000></a>
+            </p>
+            <p>
+                <br> While I still plan to use the lamp innards that were required for the assignment, I decided to try and bring another light component into the mix.
+                <br> I had the idea of creating a bunch of Voronoi spheres, and adding an LED candle inside the spheres to create a cool lighting effect.
+                <br> I then wanted to assemble everything to hang like the cascade lamps I showed earlier, using the lamp innard as a support.
+                <br> Here is my planning sketch:
+            <p>
+                <img src="Assignment 5.10.png" width=1000></a>
+
+            <p> 
+                <br> ------
+                <br> Acknowledgements: Thank you to Annie Lin for all her help with the Bantam software, and Petrina Chan for the moral support and Rhino inspo!
+                <br> ------
+                <br> <a href="https://drive.google.com/drive/folders/1jnb0vEbWpumz3w3oOev0eS6c-EM_sVW2?usp=sharing"> DXFs, Gerbers, and Rhino files!  </a>
+                <br> ------
+            </p>
+        </div>
+        
+    </body>
+</html>
