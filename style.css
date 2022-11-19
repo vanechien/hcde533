@@ -30,12 +30,12 @@ a {
   }
 
 .assignment {
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 16px;
+  line-height: 22px;
   font-family: 'helvetica', 'arial', 'sans';
   padding: 20px 20px 20px 30px;
   width: 250px;
-  height: 350px;
+  height: 400px;
   float: left;
 }
 
@@ -61,7 +61,7 @@ a {
 
 .widebody {
     width: 800px;
-    padding: 0px 30px 30px 30px;
+    padding: 10px 30px 30px 30px;
 }
 
 .widebody a {
