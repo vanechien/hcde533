@@ -1,0 +1,189 @@
+
+<!DOCTYPE html> 
+<html> 
+    <head> 
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, maximum-scale=1.0" />
+
+        <title>Vanessa's Assignment 7!</title> 
+
+        <link href="style.css" media="screen" rel="stylesheet" type="text/css" />
+
+    </head> 
+    <body> 
+
+        <div class="header">
+            <h1>Assignment 8: Final Project / Custom Macro Keypad</h1>
+            <p>By Vanessa Chien Lai - HCDE 533
+                 
+            <p> For my final project, I want to create a custom macro keypad. Macropads are basically mini keyboards that can be programmed to perform shortcuts (macros).
+                <br> I really like mechanical keyboards, and felt like this could be a really good way to learn how to (1) handwire my own and (2) solder!
+                <br> I wanted to create a 2x4 macropad (8 keys), and program it to perform useful shortcuts.
+            <p> 
+                <img src="Assignment 7.1.png" width=900></a>
+            </p>
+            <p>
+              Here's a sneak peek at the final result:
+            </p>
+            <p> 
+                <img src="Assignment 8.1.png" width=1200></a>
+            </p>
+            <p>
+              <br> METHODS AND TECHNIQUES USED
+                <br> ------
+                <br>  1. Rhino3D (macropad casing and laser cut shape)
+                <br>  2. 3D printing (macropad casing)
+                <br>  3. Laser cutting (top and bottom acrylic plates)
+                <br>  4. Mold design and casting (resin keycaps)
+                <br>  5. Incorporating stock parts (Arduino Pro Micro, Cherry MX blues)
+                <br>  6. Interference fit (top plate press-fits into casing)
+            </p>
+            <p>
+              <br> MATERIALS
+                <br> ------
+                <br> Here's the full list of materials, tools, and other items:
+            </p>
+            <p>
+                <img src="final materials.png" width=900></a>
+            </p>
+            <p>
+                <br> PART 1: MACRO PAD CASING
+                <br> ------
+            <p>
+                Before modeling anything, I measured the dimensions of my stock parts, just to get an idea of how big everything needed to be.
+                <img src="Assignment 8.2.png" width=700></a>
+            </p>
+            <p>
+               For my casing, I did a basic slanted rectangle, with a bar to support the Arduino, as well as an opening for the micro USB.
+               <br> I made sure to add guide holes for the screws later as well, using BooleanDifference. I added a round edge using FilletEdge.
+               <br> After making all the shapes I wanted, I combined everything using BooleanUnion.
+                <img src="Assignment 8.3.png" width=900></a>
+            </p>
+            <p>
+               3D printing was kind of wonky at first and I kept getting weird ripples. I wasn't able to get rid of them entirely, but here were the settings I used.
+               <br> I added line supports with 5% density (thanks Jess for the tip!) and slowed down the print speed to help with the rippling.
+               <br> The Arduino fit snugly into place!
+                <img src="Assignment 8.4.png" width=900></a>
+            </p>
+                <img src="Assignment 8.5.png" width=900></a>
+            <p>
+            </p>
+
+
+            <p>
+                <br> PART 2: LASER CUTTING TOP AND BOTTOM PLATES
+                <br> ------
+            <p>
+                I used the same curves that I extruded for the casing to create the shapes for the laser cuts.
+                 <br> I used 14x14mm squares for each of the switches, as well as 2mm radius circles for the screws onthe bottom plate.
+                <img src="Assignment 8.8.png" width=700></a>
+            </p>
+            <p>
+               The test cut went well and the switch fit really well! I learned that it's better to keep the protective film on the acrylic to minimize discoloraton. 
+               <br> After cutting all my pieces, I sanded the top plate to accommodate for the interference fit. Then I added my switches.
+               <br> Here are a few pics of the process:
+                <img src="Assignment 8.7.png" width=1100></a>
+            </p>
+
+
+            <p>
+                <br> PART 3: MOLDING & CASTING RESIN KEYCAPS
+                <br> ------
+            <p>
+                Instead of the two part mold we did in class, I wanted to try making a mold that uses cured silicone itself to cast the second part of the mold.
+                Instead of the sphere registration keys I used for the molding assignment, I added a little "lip" to act as a registration mark all around the four edges.
+                I thought this might help keep everything airtight. Then I made a container that would serve as a mold for the second part of the silicone.
+            </p>
+            <p>
+                <img src="Assignment 8.8.png" width=900></a>
+            </p>
+            <p>
+              My master keycap was an actual keycap that I already had, which is why I didn't 3D print the master part. I placed it into Mold #1 using clay as the "glue" and poured my Mold Star 30.
+               <br> After curing, I flipped it around, removed some polymer clay from the keycap, sprayed some mold release, and poured the second part of the silicone.
+               <br> Many hours later I had mold #1 and #2 ready to go! I repeated this 4 times so that I would only need 2 batches of keycaps.
+               <br> I added sprues subtractively by punching out some holes in each corner. I did this deliberately in order to maintain the precision of my mold.
+                <img src="Assignment 8.9.png" width=1100></a>
+            </p>
+            <p>
+              Now it was time to pour the resin. I meaasured the mixed the resin, and filled my mold #1 using a plastic syringe.
+              <br> I then dropped different colors of alcohol inks to color the resin. My first 2 batches failed, but I learned that alcohol inks will cure gummy.
+              <br> To fix this, I poured some extra resin on top after a couple hours, which fixed the problem somewhat. I did blue, purple, and green keycaps.
+              <b> Lastly, I demolded and glazed each keycap with some clear gel nail polish and UV light (notice the difference!!)
+                <img src="Assignment 8.10.png" width=1100></a>
+              
+            <p>
+                <br> PART 4: SOLDERING & PROGRAMMING
+                <br> ------
+            <p>
+                Before soldering, I needed to plan out my keyboard layout. I used keyboard-layout-editor.com to create the raw data for my keypad layout, 2x4.
+                <br> Then I imported that raw data into kbfirmware.com in order to map out the wiring for the Arduino. 
+                <br> I also set each key to serve as a different F key - F13 through F20. I chose this method because this will make the shortcuts easily switched out.
+            </p>
+            <p>
+                <img src="Assignment 8.11.png" width=1100></a>
+            </p>
+            <p>
+                The "pins" tab showed me that each column and row corresponds to a pin on the Arduino. I used this diagram to help me figure out which pin was which.
+                <br> Lastly, I exported everything as a .hex file.
+                <img src="Assignment 8.12.png" width=900></a>
+            </p>
+            <p>
+              Now it was time to solder! The MILL ran out of black copper wire...so I had to solder everything with 1 color, which was not fun.
+              <br> I used some masking tape and labels to label each wire and make sure I wasn't soldering anything wrong. (Thank you Jalia for the idea!)
+              <br> I also used a multimeter to ensure each solder was creating a proper connection between switches. (Thank you to Ozzy from the MILL for his help!)
+              <br> Lastly, I ensured all my wires fit in the case I had 3D printed.
+              <img src="Assignment 8.13.png" width=1100></a>
+            </p>
+            <p>
+              Lastly, I connected my Arduino to my computer to start programming. I used QMK Toolbox from github.com/qmk/qmk_toolbox, which is an open source keyboard firmware.
+              <br> I opened the .hex file I had saved from earlier, and then it was time to flash the Arduino.
+              <br> I shorted the "Reset" and "Ground" pins of the Arduino using a small piece of wire, which puts the Arduino in "flash" mode (or bootloader mode).
+              <img src="Assignment 8.14.png" width=900></a>
+            </p>
+            <p>
+              To test that each key was working, I opened keyboardchecker.com and pressed on each key, and made a quick map of what each key registered as.
+              <img src="Assignment 8.15.png" width=700></a>
+            </p>
+
+
+          <p>
+                <br> PART 5: FINAL ASSEMBLY!
+                <br> ------
+            <p>
+                Final assembly was pretty straightforward. I used some hot glue to secure the switches, glued the Arduino to the bottom of the case, and tucked in all the wires.
+              <br> Then, I snapped the top plate into place, and added the resin keycaps.
+              <br> Lastly, I screwed in the bottom plate with some screws, with the help of a Dremel drill to make the screw holes a little easier to screw into. 
+              <br> Here's the final result!
+            </p>
+            <p>
+                <img src="Assignment 8.16.png" width=1100></a>
+            </p>
+            <p> SUPER HELPFUL TUTORIALS I USED FOR THIS PROJECT:
+              <br> ------
+               <br> • <a href="https://www.makeuseof.com/how-to-build-a-diy-qmk-powered-macro-keypad/"> How to make a custom macro pad
+               <br> • <a href="https://www.youtube.com/watch?v=DhEOmqeKvSY"> How to cast resin keycaps 
+               <br> • <a href="https://www.thingiverse.com/thing:2783650/files"> Keycap STL used for the rendering portion
+               <br> • <a href="https://www.thingiverse.com/thing:2822140"> Casing STL I used for inspiration and reference
+               <br> • <a href="http://www.keyboard-layout-editor.com/#/"> Keyboard Layout Editor for raw data
+               <br> • <a href="https://kbfirmware.com/"> Keyboard Firmware Builder
+               <br> • <a href="https://github.com/qmk/qmk_toolbox/releases/tag/beta"> Latest QMK Toolbox Release as of 12/06/2022
+               <br> • <a href="https://keyboardchecker.com/"> Keyboard tester
+               <br> • <a href="https://golem.hu/article/pro-micro-pinout/"> Arduino Pro Micro pin layout and mapping
+            <br> ------
+            <p> MY RHINO FILES, STLs, .HEX, .AI!
+              <br> ------
+               <br> • <a href="https://drive.google.com/drive/folders/1srXqMFMKR7tlZF0OM-2X3DJqKfpXiKeR?usp=sharing"> Illustrator Files for laser cut pieces
+               <br> • <a href="https://drive.google.com/drive/folders/1ZxW1pDsz7h1TpIxOiKmnvw7sb-BrQYGd?usp=sharing"> STLs for the kaycap mold and keypad casing
+               <br> • <a href="https://drive.google.com/file/d/1CNxteeBYvkSNNfGUfViMMo24ncFZki_c/view?usp=sharing"> Rhino file with all 3D modeled parts
+               <br> • <a href="https://drive.google.com/file/d/1ierpGAV1O3gsp_DhxJm7q2-uSE29Uw3n/view?usp=sharing"> .HEX file for the programming portion
+            <br> Acknowledgements
+            <br> ------
+               <br> • Thank you to Jess for the wisdom on easy-to-remove supports on 3D prints
+               <br> • Thank you to Annie for the moral support and help with brainstorming
+               <br> • Thank you to Jalia for the moral support and making soldering a little less scary
+               <br> • Thank you to Ozzy from the MILL for teaching me how to solder and use the digital multimeter
+            </p>
+        </div>
+        
+    </body>
+</html>
