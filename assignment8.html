@@ -59,22 +59,22 @@
                 <br> ------
             <p>
                 Before modeling anything, I measured the dimensions of my stock parts, just to get an idea of how big everything needed to be.
-                <img src="Assignment 8.2.png" width=700></a>
+                <br> <img src="Assignment 8.2.png" width=700></a>
             </p>
             <p>
                For my casing, I did a basic slanted rectangle, with a bar to support the Arduino, as well as an opening for the micro USB.
                <br> I made sure to add guide holes for the screws later as well, using BooleanDifference. I added a round edge using FilletEdge.
                <br> After making all the shapes I wanted, I combined everything using BooleanUnion.
-                <img src="Assignment 8.3.png" width=900></a>
+               <br> <img src="Assignment 8.3.png" width=900></a>
             </p>
             <p>
                3D printing was kind of wonky at first and I kept getting weird ripples. I wasn't able to get rid of them entirely, but here were the settings I used.
                <br> I added line supports with 5% density (thanks Jess for the tip!) and slowed down the print speed to help with the rippling.
                <br> The Arduino fit snugly into place!
-                <img src="Assignment 8.4.png" width=900></a>
+               <br> <img src="Assignment 8.4.png" width=900></a>
             </p>
-                <img src="Assignment 8.5.png" width=900></a>
             <p>
+               <br> <img src="Assignment 8.5.png" width=900></a>
             </p>
 
 
@@ -84,13 +84,13 @@
             <p>
                 I used the same curves that I extruded for the casing to create the shapes for the laser cuts.
                  <br> I used 14x14mm squares for each of the switches, as well as 2mm radius circles for the screws onthe bottom plate.
-                <img src="Assignment 8.6.png" width=700></a>
+                <br> <img src="Assignment 8.6.png" width=700></a>
             </p>
             <p>
                The test cut went well and the switch fit really well! I learned that it's better to keep the protective film on the acrylic to minimize discoloraton. 
                <br> After cutting all my pieces, I sanded the top plate to accommodate for the interference fit. Then I added my switches.
                <br> Here are a few pics of the process:
-                <img src="Assignment 8.7.png" width=1100></a>
+               <br> <img src="Assignment 8.7.png" width=1100></a>
             </p>
 
 
@@ -110,14 +110,14 @@
                <br> After curing, I flipped it around, removed some polymer clay from the keycap, sprayed some mold release, and poured the second part of the silicone.
                <br> Many hours later I had mold #1 and #2 ready to go! I repeated this 4 times so that I would only need 2 batches of keycaps.
                <br> I added sprues subtractively by punching out some holes in each corner. I did this deliberately in order to maintain the precision of my mold.
-                <img src="Assignment 8.9.png" width=1100></a>
+               <br> <img src="Assignment 8.9.png" width=1100></a>
             </p>
             <p>
               Now it was time to pour the resin. I meaasured the mixed the resin, and filled my mold #1 using a plastic syringe.
               <br> I then dropped different colors of alcohol inks to color the resin. My first 2 batches failed, but I learned that alcohol inks will cure gummy.
               <br> To fix this, I poured some extra resin on top after a couple hours, which fixed the problem somewhat. I did blue, purple, and green keycaps.
               <b> Lastly, I demolded and glazed each keycap with some clear gel nail polish and UV light (notice the difference!!)
-                <img src="Assignment 8.10.png" width=1100></a>
+              <br> <img src="Assignment 8.10.png" width=1100></a>
               
             <p>
                 <br> PART 4: SOLDERING & PROGRAMMING
@@ -133,24 +133,24 @@
             <p>
                 The "pins" tab showed me that each column and row corresponds to a pin on the Arduino. I used this diagram to help me figure out which pin was which.
                 <br> Lastly, I exported everything as a .hex file.
-                <img src="Assignment 8.12.png" width=900></a>
+                <br> <img src="Assignment 8.12.png" width=900></a>
             </p>
             <p>
               Now it was time to solder! The MILL ran out of black copper wire...so I had to solder everything with 1 color, which was not fun.
               <br> I used some masking tape and labels to label each wire and make sure I wasn't soldering anything wrong. (Thank you Jalia for the idea!)
               <br> I also used a multimeter to ensure each solder was creating a proper connection between switches. (Thank you to Ozzy from the MILL for his help!)
               <br> Lastly, I ensured all my wires fit in the case I had 3D printed.
-              <img src="Assignment 8.13.png" width=1100></a>
+              <br> <img src="Assignment 8.13.png" width=1100></a>
             </p>
             <p>
               Lastly, I connected my Arduino to my computer to start programming. I used QMK Toolbox from github.com/qmk/qmk_toolbox, which is an open source keyboard firmware.
               <br> I opened the .hex file I had saved from earlier, and then it was time to flash the Arduino.
               <br> I shorted the "Reset" and "Ground" pins of the Arduino using a small piece of wire, which puts the Arduino in "flash" mode (or bootloader mode).
-              <img src="Assignment 8.14.png" width=900></a>
+              <br> <img src="Assignment 8.14.png" width=900></a>
             </p>
             <p>
               To test that each key was working, I opened keyboardchecker.com and pressed on each key, and made a quick map of what each key registered as.
-              <img src="Assignment 8.15.png" width=700></a>
+              <br> <img src="Assignment 8.15.png" width=700></a>
             </p>
 
 
